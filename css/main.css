@@ -1,0 +1,269 @@
+/*@import url('https://fonts.googleapis.com/css2?family=Turret+Road:wght@800&display=swap');                  fonte do cinetech*/
+@import url('https://fonts.googleapis.com/css2?family=Vollkorn:ital,wght@0,400;0,700;1,400&display=swap');  /* Fonte do site*/
+
+*{
+  margin:0px;
+  padding:0px;
+}
+
+body{
+    font-family: "Vollkorn", Georgia, serif;
+}
+
+li{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+}
+
+img{
+    display: block;
+    max-width: 100%;
+    border-radius: 5px;
+}
+
+html, body {
+	/*background: url("../img/Fundo\ azul\ claro.svg");*/
+	background-color: black;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-size: 100%;
+    scroll-behavior: smooth;
+} 
+
+/*
+main{
+    background-color: black;
+}
+*/
+
+/* Layout - Grid Geral */
+
+.layout{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas: 
+    "header header header"
+    "slide slide slide"
+    "content content content"
+    "footer footer footer";
+}
+
+.col-wide{
+    grid-column: 1/-1;
+}
+
+/* Header */
+
+.header{
+    grid-area: header;
+    background: linear-gradient(136deg,#000000,#040F55);
+    padding: 30px;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: center;
+}
+
+.header nav ul{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.header nav a{
+    display: block;
+    padding: 10px;
+    color: #6959CD;
+    font-size: 1.125em;
+    background: rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    transition: 0.1s;
+}
+
+.header nav a:hover{
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.header li + li {
+    margin-left: 30px;
+}
+
+.logo{
+    max-width: 100px;
+}
+
+/* Slide */
+
+.slide {
+    grid-area: slide;
+    display: grid;
+    grid-template-columns: auto;
+}
+
+/* Content */
+
+.content{
+    grid-area: content;
+    margin: 0 auto;
+    padding: 30px;
+}
+
+.content .titulo {
+    font-size: 2rem;
+    text-align: center;
+    color: white;
+    padding: 30px;
+}
+
+.content .filmes{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 2fr 2fr;
+    gap: 30px;
+    justify-items: center;
+    align-content: center;
+    justify-content: space-around;
+    padding: 15px;
+    
+}
+
+.content .filmes a {                    /* É preciso arrumar as animações e as dimensões da imagem*/
+    border: 15px bold whitesmoke;
+}
+
+.content .filmes a:hover{
+    border: 15px bold darkcyan;
+}
+
+.content img  {
+    height: 400px;
+    width:auto;
+}
+
+/* Footer */
+
+.footer{
+    grid-area: footer;
+    background: linear-gradient(136deg,#000000,#040F55);
+    display: grid;
+    grid-template-columns: 2fr 1fr 2fr;
+    grid-template-rows: 1fr auto;
+    gap: 30px;
+    text-align: center;
+    justify-content: center;
+    align-self: center;
+    padding: 40px 15% 15px;
+    color: white;
+    font-size: 1rem;
+}
+
+.footer section.fale-conosco ul li{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 15px 15px 15px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    align-content: space-around
+}
+
+.footer section.fale-conosco a{
+    color: #6959CD;
+    text-decoration: none;
+    margin: 30px;
+    display: grid;
+    justify-content: center;
+    align-content: center;
+}
+
+.footer section.fale-conosco a:hover{
+    color: #6959CD;
+}
+
+.footer section.social a{
+    color: #6959CD;
+    text-decoration: none;
+    margin: 30px;
+    border: 3px solid #6959CD;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    transition: 0.1s;
+}
+
+.footer section.social ul {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+}
+
+.footer section.social ul a{
+    align-items: center;
+}
+
+.footer section.social a:hover{
+    color: #6959CD;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+
+.footer section.local{
+    display: grid; 
+    justify-content: center;
+}
+
+.footer section.local p{
+    color: #6959CD;
+}
+
+.footer section.copyright{
+    font-size: 12px;
+    font-weight: bold;
+    font-style: italic;
+    color: white;
+    text-align: center;
+    padding: 0px;
+}
+
+
+@media (max-width:1200px){                                     /* Precisa adequar os cartazes */
+    .layout{
+      grid-template-columns: minmax(160px, 1fr) 1fr ;
+      grid-template-areas:
+        "header header "
+        "content  / "
+        "footer footer "
+    }
+  
+    .content{
+        display: grid;
+        grid-template-columns: minmax(160px, 1fr);
+        grid-template-rows: auto;
+    }
+
+    .footer{
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr auto;
+    }
+
+    .footer section.local{
+        display: none;
+    }
+
+    .footer section.fale-conosco{
+        display: none;
+    }
+    .footer section.social ul{
+        display: flex;
+        justify-content: center;
+        align-content: center;
+    }
+  }
+  

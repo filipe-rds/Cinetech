@@ -1,0 +1,67 @@
+
+/*  Movie */
+
+.content .movie{                                         /*Adapte para a mesma semântica adotada do pages.css !!!!!!!!*/
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(3 1fr);
+    margin: 5rem auto;
+    width: 80%;
+    height: 100vh;
+    justify-items: center;
+    align-items: start;
+    text-align: center;
+  }
+  
+  .content .movie img{
+    height:325px ;
+    width:275px ;
+    border: 3px solid rgba(255, 255, 255, 0.1);
+  }
+  
+  .content .movie .info{
+    background: linear-gradient(136deg,darkcyan,#040F55); /* Personalize !!!*/
+    border-radius:20px;
+  }
+  
+  .content .movie .info .sinotitle{
+  margin-bottom: 1rem;
+    
+  }
+
+  /*  Sessões  */
+
+  .content .sessoes{
+    color: white;
+  }
+
+  /*  Preços  */
+  .content .preços{
+    color: white;
+  }
+
+
+  /*  Estilização de tabelas  */
+
+  .content table{
+    font-size: 20px;
+    text-align: center;
+    margin: 30px 15px 15px 15px;
+    border-collapse: collapse;
+    width: 80%;
+     
+  }
+  .content table tr{
+    height: 50px;
+  }
+  
+  .content table th, table td{
+    border: white solid 1px;
+  }
+  
+  .content #secondcel{
+    border-top: none;
+    border-left: none; 
+  }
+  
+
