@@ -7,33 +7,58 @@
     grid-template-rows: repeat(3 1fr);
     margin: 5rem auto;
     width: 80%;
-    height: 100vh;
+    height: 600px;
     justify-items: center;
     align-items: start;
     text-align: center;
   }
   
-  .content .movie img{
-    height:325px ;
-    width:275px ;
-    border: 3px solid rgba(255, 255, 255, 0.1);
-  }
+
+.content .movie img{
+  height:520px;
+  width:70%;
+  border: 2px solid #040F55;
   
+}
+
+  .content .movie .detalhes h1{
+  margin-bottom:2rem;
+  font-size: 3rem;
+  }
+
   .content .movie .info{
-    background: linear-gradient(136deg,darkcyan,#040F55); /* Personalize !!!*/
+    display: grid;
+    background: linear-gradient(136deg,#040F55,#000000); /*linear-gradient(136deg,darkcyan,#040F55);*/ 
     border-radius:20px;
+    font-size: 1.3rem;
+    grid-template-columns:1fr 1fr 1fr;
+    text-align: center;
+    height:auto;
   }
-  
-  .content .movie .info .sinotitle{
+
+
+.content .movie .info .sinopse h2{
+    margin-bottom: 1rem;
+  }
+
+  .content .movie .info .sinopse{
   margin-bottom: 1rem;
-    
+  grid-column: 1/4;
   }
+.content .movie .detalhes .info .idade p{
+  background-color: #f35e04;
+  display: inline;
+  padding: 4px 5px;
+  border-radius: 2px;
+}
 
   /*  Sessões  */
 
-  .content .sessoes{
+  .content .movie .detalhes .info .sessoes{
     color: white;
-  }
+    grid-column: 1/4;
+    padding-top: 2rem;
+}
 
   /*  Preços  */
   .content .preços{
@@ -44,15 +69,15 @@
   /*  Estilização de tabelas  */
 
   .content table{
-    font-size: 20px;
+    font-size: 1.3rem;
     text-align: center;
-    margin: 30px 15px 15px 15px;
+    margin: auto;
     border-collapse: collapse;
     width: 80%;
      
   }
   .content table tr{
-    height: 50px;
+    height: 3rem;
   }
   
   .content table th, table td{

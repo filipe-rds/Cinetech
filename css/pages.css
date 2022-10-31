@@ -25,19 +25,12 @@ img{
 }
 
 html, body {
-	/*background: url("../img/Fundo\ azul\ claro.svg");*/
 	background-color: black;
 	background-repeat: no-repeat;
 	background-attachment: fixed;
 	background-size: 100%;
-    scroll-behavior: smooth;
+  scroll-behavior: smooth;
 } 
-
-/*
-main{
-    background-color: black;
-}
-*/
 
 /* Layout - Grid Geral */
 
@@ -73,7 +66,7 @@ main{
 .header nav a{
     display: block;
     padding: 10px;
-    color: #6959CD;
+    color: whitesmoke;/*#6959CD;*/
     font-size: 1.125em;
     background: rgba(0, 0, 0, 0.1);
     border-radius: 5px;
@@ -89,7 +82,7 @@ main{
 }
 
 .logo{
-    max-width: 100px;
+    max-width: 150px;
 }
 
 /* Content */
@@ -97,7 +90,6 @@ main{
 .content{
     grid-area: content;
     margin: 0 auto;
-    padding: 30px;
     color: white;
 }
 
@@ -108,24 +100,8 @@ main{
     padding: 30px;
 }
 
-.content .filmes{
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 2fr 2fr;
-    gap: 30px;
-    justify-items: center;
-    align-content: center;
-    justify-content: space-around;
-    padding: 15px;
-    
-}
-
-.content .filmes a {                    /* É preciso arrumar as animações e as dimensões da imagem*/
-    border: 15px bold whitesmoke;
-}
-
-.content .filmes a:hover{
-    border: 15px bold darkcyan;
+.content .mapa{
+    display: flex;
 }
 
 .content img  {
@@ -161,7 +137,7 @@ main{
 }
 
 .footer section.fale-conosco a{
-    color: #6959CD;
+    color: #7B68EE;
     text-decoration: none;
     margin: 30px;
     display: grid;
@@ -170,14 +146,14 @@ main{
 }
 
 .footer section.fale-conosco a:hover{
-    color: #6959CD;
+    color: #7B68EE;
 }
 
 .footer section.social a{
-    color: #6959CD;
+    color: #7B68EE;
     text-decoration: none;
     margin: 30px;
-    border: 3px solid #6959CD;
+    border: 3px solid #7B68EE;
     border-radius: 50%;
     width: 50px;
     height: 50px;
@@ -201,7 +177,7 @@ main{
 }
 
 .footer section.social a:hover{
-    color: #6959CD;
+    color: #7B68EE;
     background: rgba(0, 0, 0, 0.5);
 }
 
@@ -212,7 +188,7 @@ main{
 }
 
 .footer section.local p{
-    color: #6959CD;
+    color: #7B68EE;
 }
 
 .footer section.copyright{
@@ -224,13 +200,14 @@ main{
     padding: 0px;
 }
 
+/*	Portabilidades */
 
-@media (max-width:1200px){
+@media (max-width:1200px){                                     /* Precisa adequar os cartazes */
     .layout{
       grid-template-columns: minmax(160px, 1fr) 1fr ;
       grid-template-areas:
         "header header "
-        "content  / "
+        "content content"
         "footer footer "
     }
   
@@ -257,5 +234,97 @@ main{
         justify-content: center;
         align-content: center;
     }
-  }
-  
+}
+
+@media (max-width:900px){                                     /* Precisa adequar os cartazes */
+    .layout{
+      grid-template-columns: 1fr ;
+      grid-template-areas:
+        "header"
+        "content"
+        "footer"
+    }
+  	.header{
+			grid-template-columns: minmax(160px, 1fr);
+			grid-template-rows: 1fr 1fr;
+			gap:5px;
+		}
+		.header nav ul{
+			display: flex;
+			justify-content: flex-start;
+		}
+		.header nav a{
+	    display: block;
+	    padding: 5px;
+	    color: whitesmoke;/*7B68EE;*/
+	    font-size: 1.2rem;
+	    background: rgba(0, 0, 0, 0.1);
+	    border-radius: 5px;
+	    transition: 0.1s;
+		}
+		.header .menu{
+			justify-content: flex-end;
+			padding: 0px;
+		}
+    .content{
+        display: grid;
+        grid-template-columns: minmax(160px, 1fr);
+        grid-template-rows: auto;
+    }
+		.content .filmes{
+			display: none;
+		}
+		.content div.scrollmenu {
+			display: block;
+		  background-color: black;
+		  overflow: auto;
+		  white-space: nowrap;
+		}
+		
+		.content div.scrollmenu a {
+		  display: inline-block;
+		  color: white;
+		  text-align: center;
+		  padding: 14px;
+		  text-decoration: none;
+		}
+
+		.conternt div.scrollmenu a:hover {
+  			background-color: rgba(0, 0, 0, 0.1);
+		}
+    .footer{
+        grid-template-columns: minmax(160px, 1fr);
+        grid-template-rows: 1fr auto;
+    }
+
+    .footer section.local{
+        display: none;
+    }
+
+    .footer section.fale-conosco{
+        display: none;
+    }
+    .footer section.social ul{
+        display: flex;
+        justify-content: center;
+        align-content: center;
+    }
+}
+@media (max-width:405px){
+	
+	.header nav ul{
+		flex-direction: column;
+		justify-content: flex-end;
+	}
+	
+	.header nav ul li{
+		text-align: end;
+	}
+	.header li + li {
+    margin-left: 0px;
+	}
+	.header nav a, .header nav a:hover{
+		background: rgba(0, 0, 0, 0);
+	}
+}
+
