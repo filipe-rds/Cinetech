@@ -343,6 +343,10 @@ body {
     white-space: nowrap;
   }
 
+  .content div.scrollmenu img{
+    border: 1px solid #040F55;
+  }
+
   .content div.scrollmenu a {
     display: inline-block;
     color: white;
