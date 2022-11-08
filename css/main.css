@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Vollkorn:ital,wght@0,400;0,700;1,400&display=swap"); /* Fonte do site*/
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;700&display=swap");
 
 * {
   margin: 0px;
@@ -6,7 +7,11 @@
 }
 
 body {
-  font-family: "Vollkorn", Georgia, serif;
+  font-family: "Vollkorn", Georgia, serif !important;
+}
+
+main {
+  font-family: "Roboto", Georgia, serif;
 }
 
 li {
@@ -30,6 +35,7 @@ body {
   background-attachment: fixed;
   background-size: 100%;
   scroll-behavior: smooth;
+  background-image: url("https://media.giphy.com/media/UYBDCJjwOd9Re/giphy.gif");
 }
 
 /* Layout - Grid Geral */
@@ -53,7 +59,7 @@ body {
 .header {
   grid-area: header;
   background: linear-gradient(136deg, #000000, #040f55);
-  padding: 30px;
+  padding: 15px;
   display: grid;
   grid-template-columns: 1fr auto;
   align-items: center;
@@ -113,7 +119,7 @@ body {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 2fr 2fr;
-  gap: 50px;
+  gap: 70px;
   justify-items: center;
   align-content: center;
   justify-content: space-around;
@@ -147,7 +153,8 @@ body {
   overflow: hidden;
   border-radius: 5px;
   height: 400px;
-  border: 1px solid #040f55;
+  border: 1px solid #7b68ee;
+  box-shadow: 0 0 2rem rgba(123, 104, 238, 1);
 }
 .zoom img {
   max-width: 100%;
@@ -170,6 +177,17 @@ body {
 .content div.scrollmenu {
   display: none;
 }
+.content div.scrollmenu img {
+  border: 1px solid #7b68ee;
+  box-shadow: 0 0 2rem rgba(123, 104, 238, 1);
+}
+
+.tracking-in-contract-bck {
+  -webkit-animation: tracking-in-contract-bck 1s
+    cubic-bezier(0.215, 0.61, 0.355, 1) both;
+  animation: tracking-in-contract-bck 1s cubic-bezier(0.215, 0.61, 0.355, 1)
+    both;
+}
 
 /* Footer */
 
@@ -179,7 +197,7 @@ body {
   display: grid;
   grid-template-columns: 2fr 1fr 2fr;
   grid-template-rows: 1fr auto;
-  gap: 30px;
+  gap: 15px;
   text-align: center;
   justify-content: center;
   align-self: center;
@@ -187,7 +205,6 @@ body {
   color: white;
   font-size: 1rem;
 }
-
 .footer section.fale-conosco ul li {
   display: grid;
   grid-template-columns: 1fr;
@@ -252,7 +269,7 @@ body {
 }
 
 .footer section.copyright {
-  font-size: 12px;
+  font-size: 1rem;
   font-weight: bold;
   font-style: italic;
   color: white;
@@ -328,10 +345,16 @@ body {
     justify-content: flex-end;
     padding: 0px;
   }
+  carousel-indicators {
+    display: none;
+  }
   .content {
     display: grid;
     grid-template-columns: minmax(160px, 1fr);
     grid-template-rows: auto;
+  }
+  main {
+    background-image: url("https://media.giphy.com/media/UYBDCJjwOd9Re/giphy.gif");
   }
   .content .filmes {
     display: none;
@@ -343,8 +366,8 @@ body {
     white-space: nowrap;
   }
 
-  .content div.scrollmenu img{
-    border: 1px solid #040F55;
+  .content div.scrollmenu img {
+    border: 1px solid #040f55;
   }
 
   .content div.scrollmenu a {
@@ -377,6 +400,13 @@ body {
   }
 }
 @media (max-width: 405px) {
+  main {
+    background-image: url("https://media.giphy.com/media/UYBDCJjwOd9Re/giphy.gif");
+  }
+  .slide {
+    display: none;
+  }
+
   .header nav ul {
     flex-direction: column;
     justify-content: flex-end;

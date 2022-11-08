@@ -1,32 +1,55 @@
 /*  Movie */
 
 .content .movie {
-  /*Adapte para a mesma semântica adotada do pages.css !!!!!!!!*/
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: repeat(3 1fr);
   margin: 5rem auto;
   width: 80%;
-  height: 600px;
+  height: auto;
   justify-items: center;
-  align-items: start;
+  align-items: end;
   text-align: center;
 }
 
+.content h1 {
+  font-size: 3rem;
+}
 .content .movie img {
-  height: 520px;
+  height: 650px;
   width: 70%;
-  border: 2px solid #040f55;
+  border: 2px solid #7b68ee;
+  box-shadow: 0 0 3rem rgba(123, 104, 238, 1);
+}
+.content .movie .filmetit {
+  display: none;
+}
+
+#avatar {
+  height: 650px;
+  width: 65%;
+  border: 2px solid #7b68ee;
+  box-shadow: 0 0 3rem rgba(123, 104, 238, 1);
+}
+
+.content .movie .detalhes {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  height: 100%;
 }
 
 .content .movie .detalhes h1 {
-  margin-bottom: 2rem;
+  margin-bottom: 3rem;
   font-size: 3rem;
+  margin: auto;
 }
 
 .content .movie .info {
   display: grid;
   background: linear-gradient(136deg, #040f55, #000000);
+  border: 2px solid #040f55;
   border-radius: 20px;
   font-size: 1.3rem;
   grid-template-columns: 1fr 1fr 1fr;
@@ -36,18 +59,46 @@
 
 .content .movie .info .sinopse h2 {
   margin-bottom: 1rem;
+  padding-top: 1rem;
 }
 
 .content .movie .info .sinopse {
   margin-bottom: 1rem;
   grid-column: 1/4;
+  padding: 0 1rem;
 }
 
-.content .movie .detalhes .info .idade p {
+.content .movie .info h3 {
+  padding-bottom: 0.5rem;
+}
+
+.content .movie .detalhes .info .idade14 p {
   background-color: #f35e04;
   display: inline;
-  padding: 4px 5px;
+  padding: 4px 8px;
   border-radius: 2px;
+  font-weight: bold;
+}
+.content .movie .detalhes .info .idade12 p {
+  background-color: #ffcc00;
+  display: inline;
+  padding: 4px 8px;
+  border-radius: 2px;
+  font-weight: bold;
+}
+.content .movie .detalhes .info .idadelivre p {
+  background-color: #00af51;
+  display: inline;
+  padding: 4px 9px;
+  border-radius: 2px;
+  font-weight: bold;
+}
+.content .movie .detalhes .info .idade16 p {
+  background-color: #e61700;
+  display: inline;
+  padding: 4px 8px;
+  border-radius: 2px;
+  font-weight: bold;
 }
 
 /*  Sessões  */
@@ -56,16 +107,22 @@
   color: white;
   grid-column: 1/4;
   padding-top: 2rem;
+  padding-bottom: 2rem;
 }
 
-/*  Preços  */
-.content .preços {
-  color: white;
+.content .movie .detalhes .info .mob-sess {
+  display: none;
+  font-weight: bold;
+  grid-column: 1/4;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  width: 80%;
+  justify-self: center;
 }
 
 /*  Estilização de tabelas  */
 
-.content table {
+.content .sessoes table {
   font-size: 1.3rem;
   text-align: center;
   margin: auto;
@@ -82,11 +139,463 @@ table td {
   border: white solid 1px;
 }
 
-.content #secondcel {
-  border-top: none;
-  border-left: none;
+.content .pricetitle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding-bottom: 5rem;
+  padding-top: 8rem;
 }
 
-/* @media (max-width:1200px) */
-/* @media (max-width:900px) */
-/* @media (max-width:405px) */
+.content .pricetitle img {
+  width: 4rem;
+  height: 4rem;
+  padding-left: 1rem;
+  position: relative;
+  -moz-transition: all 0.3s;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+.pricetitle:hover img {
+  -moz-transform: rotate(30deg);
+  -webkit-transform: rotate(30deg);
+  transform: rotate(30deg);
+}
+.content .preços {
+  display: flex;
+  color: white;
+  justify-content: center;
+  text-align: center;
+  margin: auto;
+  flex-direction: column;
+}
+
+.content .preços .mob-price {
+  display: none;
+  font-size: 1rem;
+  text-align: center;
+  margin: auto;
+  border-collapse: collapse;
+  width: 90%;
+  background: linear-gradient(136deg, #040f55, #000000);
+}
+
+.content .preços .tabela {
+  font-size: 1.2rem;
+  text-align: center;
+  margin: auto;
+  border-collapse: collapse;
+  width: 50%;
+  background: linear-gradient(136deg, #040f55, #000000);
+}
+.content .preços .imgddd {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  height: auto;
+  width: 100%;
+  margin: 0;
+}
+
+.content .preços .imgddd img {
+  height: 2.5rem;
+  width: 3rem;
+  padding-left: 0.5rem;
+}
+
+.content .preços .compre {
+  width: 80%;
+  display: flex;
+  margin: auto;
+}
+
+.content .preços .compre a {
+  border: 1px outset #df9916;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  border-radius: 0.7rem;
+  color: white;
+  font-weight: bold;
+}
+.content .preços .compre a:hover {
+  background: #7b68ee;
+}
+
+.content .preços .compre img {
+  height: 2rem;
+  width: 2rem;
+  padding-left: 0.5rem;
+}
+
+.content .preços .tabela thead th {
+  width: 3rem;
+}
+
+.content .preços .mob-price .last-cel {
+  border-top: 1px solid black;
+  border-right: 1px solid black;
+  background: black;
+  width: 30%;
+}
+
+.content .preços .tabela .topcel {
+  border-top: 1px solid black;
+  border-left: 1px solid black;
+  background: black;
+}
+.content .preços p {
+  padding-top: 0.3rem;
+  padding-left: 5rem;
+  font-size: 0.8rem;
+}
+
+.content .preços .tabela .botcel {
+  border-bottom: 1px solid black;
+  border-left: 1px solid black;
+  background: black;
+}
+.content .trailer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.content .trailer .trailertitle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding-bottom: 5rem;
+  padding-top: 10rem;
+  width: 100%;
+}
+
+.content .trailer .trailertitle h1 {
+  text-align: center;
+  font-size: 3rem;
+}
+.content .trailer .trailertitle img {
+  width: 3rem;
+  height: 3rem;
+  padding-left: 1rem;
+  position: relative;
+  -moz-transition: all 0.3s;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  padding-bottom: 1rem;
+}
+
+.trailertitle:hover img {
+  -moz-transform: rotate(30deg);
+  -webkit-transform: rotate(30deg);
+  transform: rotate(30deg);
+}
+
+.content .trailer .teaser {
+  display: flex;
+
+  width: 100%;
+  text-align: center;
+  justify-content: center;
+  height: 65vh;
+  margin-bottom: 10rem;
+}
+
+.content .trailer .teaser iframe {
+  margin: auto;
+  height: 85%;
+  width: 900px;
+  box-shadow: 0 0 3rem rgba(123, 104, 238, 1);
+}
+@media (max-width: 405px) {
+  .content .movie {
+    margin-top: 5rem;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3 1fr);
+  }
+  .content .movie img {
+    height: 400px;
+    width: 100%;
+  }
+  .content .movie .detalhes h1 {
+    display: none;
+  }
+  .content h1 {
+    font-size: 2.5rem;
+  }
+  .content .movie .filmetit {
+    display: block;
+    margin-bottom: 2rem;
+    grid-row: 1;
+  }
+  .content .movie .info {
+    text-align: center;
+    width: 100%;
+    margin-top: 3rem;
+  }
+  .content .movie .detalhes .info .sessoes {
+    display: none;
+  }
+  .content .movie .detalhes .info .mob-sess {
+    display: grid;
+  }
+  .content .movie .detalhes .info .mob-sess table {
+    border-collapse: collapse;
+  }
+  .mob-sess tr:nth-child(2n) {
+    background-color: #7b68ee;
+    color: black;
+  }
+  .content .pricetitle {
+    padding: 0 0 2rem 0;
+    width: 80%;
+    margin: auto;
+  }
+
+  .content .pricetitle img {
+    align-self: center;
+    padding-left: 0;
+  }
+  .content .preços .mob-price {
+    display: grid;
+  }
+
+  .content .preços .tabela {
+    display: none;
+  }
+
+  .content .preços .mob-price .entradas {
+    width: 27%;
+  }
+
+  .content .preços .imgddd img {
+    height: 2.5rem;
+    width: 1.8rem;
+  }
+  .content .preços .compre {
+    width: 85%;
+    height: auto;
+    display: flex;
+    margin: auto;
+    font-size: 1rem;
+  }
+  .content .preços .compre img {
+    height: 2rem;
+    width: 1.5rem;
+    padding-left: 0;
+  }
+  .content .preços p {
+    padding: 0.1rem 1.1rem;
+    font-size: 0.7rem;
+  }
+  .content .trailer .teaser {
+    height: 300px;
+  }
+
+  .content .trailer .teaser iframe {
+    height: 100%;
+    width: 90%;
+    box-shadow: 0 0 3rem rgba(123, 104, 238, 1);
+    border-radius: 5px;
+  }
+  .content .trailer .trailertitle {
+    padding: 4rem 0 2rem 0;
+  }
+}
+
+@media (max-width: 900px) {
+  .content .movie {
+    margin-top: 5rem;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3 1fr);
+  }
+  .content .movie img {
+    height: 400px;
+    width: 70%;
+  }
+  .content .movie .detalhes h1 {
+    display: none;
+  }
+  .content h1 {
+    font-size: 2.5rem;
+  }
+  .content .movie .filmetit {
+    display: block;
+    margin-bottom: 2rem;
+    grid-row: 1;
+  }
+  .content .movie .info {
+    text-align: center;
+    width: 100%;
+    margin-top: 3rem;
+  }
+  .content .movie .detalhes .info .sessoes {
+    display: none;
+  }
+  .content .movie .detalhes .info .mob-sess {
+    display: grid;
+  }
+  .content .movie .detalhes .info .mob-sess table {
+    border-collapse: collapse;
+  }
+  .mob-sess tr:nth-child(2n) {
+    background-color: #7b68ee;
+    color: black;
+  }
+  .content .pricetitle {
+    padding: 0 0 2rem 0;
+    width: 80%;
+    margin: auto;
+  }
+
+  .content .pricetitle img {
+    align-self: center;
+    padding-left: 0;
+  }
+  .content .preços .mob-price {
+    display: grid;
+  }
+
+  .content .preços .tabela {
+    display: none;
+  }
+
+  .content .preços .mob-price .entradas {
+    width: 27%;
+  }
+
+  .content .preços .imgddd img {
+    height: 2.5rem;
+    width: 1.8rem;
+  }
+  .content .preços .compre {
+    width: 85%;
+    height: auto;
+    display: flex;
+    margin: auto;
+    font-size: 1rem;
+  }
+  .content .preços .compre img {
+    height: 2rem;
+    width: 1.5rem;
+    padding-left: 0;
+  }
+  .content .preços p {
+    padding: 0.1rem 1.1rem;
+    font-size: 0.7rem;
+  }
+  .content .trailer .teaser {
+    height: 300px;
+  }
+
+  .content .trailer .teaser iframe {
+    height: 100%;
+    width: 90%;
+    box-shadow: 0 0 3rem rgba(123, 104, 238, 1);
+    border-radius: 5px;
+  }
+  .content .trailer .trailertitle {
+    padding: 4rem 0 2rem 0;
+  }
+}
+
+@media (max-width: 1200px) {
+  .content .movie {
+    margin-top: 5rem;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3 1fr);
+  }
+  .content .movie img {
+    height: 400px;
+    width: 50%;
+  }
+  .content .movie .detalhes h1 {
+    display: none;
+  }
+  .content h1 {
+    font-size: 2.5rem;
+  }
+  .content .movie .filmetit {
+    display: block;
+    margin-bottom: 2rem;
+    grid-row: 1;
+  }
+  .content .movie .info {
+    text-align: center;
+    width: 100%;
+    margin-top: 3rem;
+  }
+  .content .movie .detalhes .info .sessoes {
+    display: none;
+  }
+  .content .movie .detalhes .info .mob-sess {
+    display: grid;
+  }
+  .content .movie .detalhes .info .mob-sess table {
+    border-collapse: collapse;
+  }
+  .mob-sess tr:nth-child(2n) {
+    background-color: #7b68ee;
+    color: black;
+  }
+  .content .pricetitle {
+    padding: 0 0 2rem 0;
+    width: 80%;
+    margin: auto;
+  }
+
+  .content .pricetitle img {
+    align-self: center;
+    padding-left: 0;
+  }
+  .content .preços .mob-price {
+    display: grid;
+  }
+
+  .content .preços .tabela {
+    display: none;
+  }
+
+  .content .preços .mob-price .entradas {
+    width: 27%;
+  }
+
+  .content .preços .imgddd img {
+    height: 2.5rem;
+    width: 1.8rem;
+  }
+  .content .preços .compre {
+    width: 85%;
+    height: auto;
+    display: flex;
+    margin: auto;
+    font-size: 1rem;
+  }
+  .content .preços .compre img {
+    height: 2rem;
+    width: 1.5rem;
+    padding-left: 0;
+  }
+  .content .preços p {
+    padding: 0.1rem 1.1rem;
+    font-size: 0.7rem;
+  }
+  .content .trailer .teaser {
+    height: 300px;
+  }
+
+  .content .trailer .teaser iframe {
+    height: 100%;
+    width: 90%;
+    box-shadow: 0 0 3rem rgba(123, 104, 238, 1);
+    border-radius: 5px;
+  }
+  .content .trailer .trailertitle {
+    padding: 4rem 0 2rem 0;
+  }
+}
