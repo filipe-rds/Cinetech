@@ -5,6 +5,9 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="../../css/bootstrap.css">
+  <link rel="stylesheet" href="../../css/bootstrap-theme.css">
+  <link rel="stylesheet" href="../../css/modal.css">
   <link rel="stylesheet" href="../../css/pages.css">
   <link rel="stylesheet" href="../../css/filmes.css">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -136,22 +139,22 @@
               <td class='botcel'></td>
               <td>
                 <div class='compre'><a
-                    href="https://www.ingresso.com/filme/avatar?city=sao-paulo&partnership=home">Compre
+                    href="https://www.ingresso.com/filme/avatar?city=sao-paulo&partnership=home" target="_blank">Compre
                     aqui <img src="../../img/ingresso.com.svg"></a></div>
               </td>
               <td>
                 <div class='compre'><a
-                    href="https://www.ingresso.com/filme/avatar?city=sao-paulo&partnership=home">Compre
+                    href="https://www.ingresso.com/filme/avatar?city=sao-paulo&partnership=home" target="_blank">Compre
                     aqui <img src="../../img/ingresso.com.svg"></a></div>
               </td>
               <td>
                 <div class='compre'><a
-                    href="https://www.ingresso.com/filme/avatar?city=sao-paulo&partnership=home">Compre
+                    href="https://www.ingresso.com/filme/avatar?city=sao-paulo&partnership=home" target="_blank">Compre
                     aqui <img src="../../img/ingresso.com.svg"></a></div>
               </td>
               <td>
                 <div class='compre'><a
-                    href="https://www.ingresso.com/filme/avatar?city=sao-paulo&partnership=home">Compre
+                    href="https://www.ingresso.com/filme/avatar?city=sao-paulo&partnership=home" target="_blank">Compre
                     aqui <img src="../../img/ingresso.com.svg"></a></div>
               </td>
             </tr>
@@ -174,7 +177,7 @@
               <td>R$ 15,00</td>
               <td>
                 <div class='compre'><a
-                    href="https://www.ingresso.com/filme/avatar?city=sao-paulo&partnership=home">Compre
+                    href="https://www.ingresso.com/filme/avatar?city=sao-paulo&partnership=home" target="_blank">Compre
                     <img src="../../img/ingresso.com.svg"></a></div>
               </td>
             </tr>
@@ -184,7 +187,7 @@
               <td>R$ 30,00</td>
               <td>
                 <div class='compre'><a
-                    href="https://www.ingresso.com/filme/avatar?city=sao-paulo&partnership=home">Compre
+                    href="https://www.ingresso.com/filme/avatar?city=sao-paulo&partnership=home" target="_blank">Compre
                     <img src="../../img/ingresso.com.svg"></a></div>
               </td>
             </tr>
@@ -198,7 +201,7 @@
               <td>R$ 18,00</td>
               <td>
                 <div class='compre'><a
-                    href="https://www.ingresso.com/filme/avatar?city=sao-paulo&partnership=home">Compre
+                    href="https://www.ingresso.com/filme/avatar?city=sao-paulo&partnership=home" target="_blank">Compre
                     <img src="../../img/ingresso.com.svg"></a></div>
               </td>
 
@@ -213,7 +216,7 @@
               <td>R$ 36,00</td>
               <td>
                 <div class='compre'><a
-                    href="https://www.ingresso.com/filme/avatar?city=sao-paulo&partnership=home">Compre
+                    href="https://www.ingresso.com/filme/avatar?city=sao-paulo&partnership=home" target="_blank">Compre
                     <img src="../../img/ingresso.com.svg"></a></div>
               </td>
             </tr>
@@ -258,15 +261,143 @@
           <li><a href="#"><i class="fa fa-instagram fa-2x" aria-hidden="true"></i></a></li>
           <li><a href="#"><i class="fa fa-twitter fa-2x" aria-hidden="true"></i></a></li>
         </ul>
+        <div class="card">
+          <div class="content">
+            <label class="modal-open modal-label" for="modal-open">
+              <h1>Trabalhe conosco</h1>
+            </label>
+            <input type="radio" name="modal" value="open" id="modal-open" class="modal-radio" />
+            <div class="modal">
+              <label class="modal-label overlay">
+                <input type="radio" name="modal" value="close" class="modal-radio" />
+              </label>
+              <div class="content">
+                <div class="top">
+                  <h2>Preencha com seus dados: </h2>
+                  <label class="modal-label close-btn">
+                    <input type="radio" name="modal" value="close" class="modal-radio" />
+                  </label>
+                </div>
+                <form>
+                  <div class="form-row">
+                    <div class="form-group col-md-6 nome">
+                      <label for="name">Nome:</label>
+                      <input type="text" class='form-control' id="name" placeholder="Nome Completo"
+                        required /><small>Campo obrigatório*</small>
+
+                    </div>
+                    <div class="form-group col-md-6 sexo">
+                      <p>Sexo:</p>
+                      <div class="form-check masc">
+                        <input class="form-check-input" type="radio" name="sexo" value="masculino" id="masculino">
+                        <label class="form-check-label" for="masculino">Masculino</label>
+                      </div>
+                      <div class="form-check">
+                        <input class="form-check-input" type="radio" name="sexo" value="feminino" id="feminino">
+                        <label class="form-check-label" for="feminino">Feminino</label>
+                      </div>
+                      <div class="form-check">
+                        <input class="form-check-input" type="radio" name="sexo" value="não-binário" id="nao-bin">
+                        <label class="form-check-label" for="nao-bin">Não-binário</label>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="form-row">
+                    <div class="form-group col-md-6 ">
+                      <label for="email">E-mail:</label>
+                      <input type="email" class='form-control' id="email" placeholder="nome@exemplo.com"
+                        required /><small>Campo obrigatório*</small>
+
+                    </div>
+                    <div class="form-group col-md-6">
+                      <label for="cell">Telefone:</label>
+                      <input type="tel" class='form-control form-control-sm' id="cell" placeholder="(xx) xxxxx-xxxx"
+                        required /><small>Campo obrigatório*</small>
+
+                    </div>
+                  </div>
+                  <div class="form-row">
+                    <div class="form-group col-md-12">
+                      <label for="inputAddress">Endereço:</label>
+                      <input type="text" class="form-control" id="inputAddress" placeholder="Rua das Laranjeiras, nº 0"
+                        required><small>Campo obrigatório*</small>
+
+                    </div>
+                  </div>
+                  <div class="form-row">
+                    <div class="form-group col-md-6">
+                      <label for="inputCity">Cidade:</label>
+                      <input type="text" class="form-control" id="inputCity" placeholder="Cidade" required><small>Campo
+                        obrigatório*</small>
+
+                    </div>
+                    <div class="form-group col-md-3">
+                      <label for="inputEstado">Estado:</label>
+                      <select id="inputEstado" class="form-control" required>
+                        <option selected>Escolher...</option>
+                        <option>AC</option>
+                        <option>AL</option>
+                        <option>AP</option>
+                        <option>AM</option>
+                        <option>BA</option>
+                        <option>CE</option>
+                        <option>DF</option>
+                        <option>ES</option>
+                        <option>GO</option>
+                        <option>MA</option>
+                        <option>MT</option>
+                        <option>MS</option>
+                        <option>MG</option>
+                        <option>PA</option>
+                        <option>PB</option>
+                        <option>PR</option>
+                        <option>PE</option>
+                        <option>PI</option>
+                        <option>RJ</option>
+                        <option>RN</option>
+                        <option>RS</option>
+                        <option>RO</option>
+                        <option>RR</option>
+                        <option>SC</option>
+                        <option>SP</option>
+                        <option>SE</option>
+                        <option>TO</option>
+                      </select>
+                      <small>Campo obrigatório*</small>
+
+                    </div>
+                    <div class="form-group col-md-3">
+                      <label for="inputCEP">CEP:</label>
+                      <input type="text" class="form-control" id="inputCEP" placeholder="CEP" required><small>Campo
+                        obrigatório*</small>
+                    </div>
+                  </div>
+                  <div class="form-row">
+                    <div class="form-group col-md-12 arq">
+                      <label for="arquivo">Nos envie seu currículo:</label>
+                      <input type="file" id="arquivo">
+                    </div>
+                  </div>
+                  <div class="form-row">
+                    <div class="form-group col-md-12">
+                      <button type="submit" class="btn btn-primary">Enviar</button>
+                    </div>
+                  </div>
+
+                </form>
+
+              </div>
+            </div>
+          </div>
+        </div>
       </section>
 
       <section class="local">
         <div>
           <h1>Localização</h1>
+          <a href="https://goo.gl/maps/rNH9AvDaHqWQU7JP8" target="_blank">Av. Primeiro de Maio, 720 - Jaguaribe</a>
         </div>
-        <div>
-          <a href="https://goo.gl/maps/rNH9AvDaHqWQU7JP8">Av. Primeiro de Maio, 720 - Jaguaribe</a>
-        </div>
+
       </section>
 
       <section class="copyright col-wide">
