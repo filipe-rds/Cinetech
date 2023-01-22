@@ -7,7 +7,7 @@
 
 **Objetivo:**
 <br>
-- Construir um site que simule uma distribuidora de filmes 
+- Construir um site que simule um cinema local. 
 
 **Tecnologias utilizadas:**
 <div style="display: inline_block">
